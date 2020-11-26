@@ -1,0 +1,28 @@
+<%= render 'form' %>
+
+<!-- <form action="/restaurants" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <label for="name">Name</label>
+  <input type="text" name="restaurant[name]"></label>
+  <label for="address">Address</label>
+  <input type="text" name="restaurant[address]"></label>
+  <label for="rating"></label>
+  <input type="number" name="restaurant[rating]">Rating</label>
+  <label type="submit"></label>
+</form> -->
+
+
+<!-- forma simplificada de criar formulários -->
+<%= form_for(@restaurant) do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :address %>
+<%= f.text_field :address %>
+<%= f.label :rating %>
+<%= f.number_field :rating %>
+<%= f.submit %>
+<% end %>
+<!-- params[:name]
+params[:address]
+params[:rating]
+ -->

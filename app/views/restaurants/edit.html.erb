@@ -1,0 +1,15 @@
+<%= render 'form' %>
+<!-- Esta linha acima chama o conteudo do arquivo _form.html.erb que contem
+uma copia deste formulário  -->
+
+<%= form_for(@restaurant) do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :address %>
+<%= f.text_field :address %>
+<%= f.label :rating %>
+<%= f.number_field :rating %>
+<%= f.submit %>
+<% end %>
+
+<!-- Mesmo formulário do new; form_for atualiza o texto do botão -->
